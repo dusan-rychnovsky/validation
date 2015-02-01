@@ -2,6 +2,8 @@ package cz.dusanrychnovsky.validation;
 
 import static cz.dusanrychnovsky.validation.ContactEmail.*;
 
+import static java.util.Arrays.asList;
+
 public class ContactEmailValidator extends Validator<ContactEmail> {
 	
 	private EmailValidator emailValidator = new EmailValidator();
@@ -15,7 +17,13 @@ public class ContactEmailValidator extends Validator<ContactEmail> {
 		result.addAll(EMAIL, emailValidator.validate(instance.getEmail()));
 		
 		DateRange dateRange = new DateRange(instance.getStartDate(), instance.getEndDate());
-		result.addAll(START_DATE, END_DATE, dateRangeValidator.validate(dateRange));
+		result.addAll(
+			asList(
+				new Path(START_DATE),
+				new Path(END_DATE)
+			),
+			dateRangeValidator.validate(dateRange)
+		);
 		
 		return result;
 	}

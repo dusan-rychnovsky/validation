@@ -16,8 +16,29 @@ public class MemberValidator extends Validator<Member> {
 		result.addAll(FIRSTNAME, nonEmptyValidator.validate(instance.getFirstName()));
 		result.addAll(LASTNAME, nonEmptyValidator.validate(instance.getLastName()));
 		
-		result.addAll(EMAIL, nonNullValidator.validate(instance.getEmail()));
-		result.addAll(EMAIL, contactEmailValidator.validate(instance.getEmail()));
+		result.addAll(validateEmail(EMAIL, instance.getEmail()));
+		
+		return result;
+	}
+	
+	/**
+	 * 
+	 * @param fieldName
+	 * @param instance
+	 * @return
+	 */
+	private Errors validateEmail(String fieldName, ContactEmail instance) {
+		
+		Errors result = new Errors();
+		
+		result.addAll(fieldName, nonNullValidator.validate(instance));
+		
+		if (instance != null) {
+			result.addAll(
+				fieldName, 
+				contactEmailValidator.validate(instance)
+			);
+		}
 		
 		return result;
 	}

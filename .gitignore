@@ -2,6 +2,10 @@
 .classpath
 .project
 
+.idea/
+atlassian-ide-plugin.xml
+validation.iml
+
 target/
 pom.xml.tag
 pom.xml.releaseBackup

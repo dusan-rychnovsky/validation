@@ -1,5 +1,6 @@
 package cz.dusanrychnovsky.validation;
 
+import cz.dusanrychnovsky.validation.validators.ListValidator;
 import cz.dusanrychnovsky.validation.validators.NonEmptyValidator;
 import cz.dusanrychnovsky.validation.validators.Validator;
 

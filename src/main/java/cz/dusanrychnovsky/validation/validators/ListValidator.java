@@ -8,8 +8,9 @@
 * electro-magnetic, chemical, optical, or otherwise, without prior
 * explicit written permission from Casenet, LLC.
 */
-package cz.dusanrychnovsky.validation;
+package cz.dusanrychnovsky.validation.validators;
 
+import cz.dusanrychnovsky.validation.Errors;
 import cz.dusanrychnovsky.validation.validators.Validator;
 
 import java.util.List;

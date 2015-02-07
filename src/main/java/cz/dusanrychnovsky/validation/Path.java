@@ -108,7 +108,7 @@ public class Path {
 		
 		return new Path(newElements);
 	}
-	
+
 	/**
 	 * 
 	 * @param other
@@ -125,6 +125,31 @@ public class Path {
 	public List<String> getElements() {
 		return Collections.unmodifiableList(elements);
 	}
+
+    /**
+     *
+     * @param index
+     * @return
+     */
+    public String get(int index) {
+        return elements.get(index);
+    }
+
+    /**
+     *
+     * @return
+     */
+    public int size() {
+        return elements.size();
+    }
+
+    /**
+     *
+     * @return
+     */
+    public boolean isEmpty() {
+        return size() == 0;
+    }
 	
 	@Override
 	public boolean equals(Object obj) {

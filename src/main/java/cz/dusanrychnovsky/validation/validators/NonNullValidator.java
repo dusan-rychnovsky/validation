@@ -1,10 +1,13 @@
-package cz.dusanrychnovsky.validation;
+package cz.dusanrychnovsky.validation.validators;
+
+import cz.dusanrychnovsky.validation.*;
+import cz.dusanrychnovsky.validation.Error;
 
 import static cz.dusanrychnovsky.validation.ErrorMessage.VALUE_IS_NULL;
 
 public class NonNullValidator extends Validator<Object> {
 	
-	private final Error error = new Error(VALUE_IS_NULL);
+	private final cz.dusanrychnovsky.validation.Error error = new Error(VALUE_IS_NULL);
 
 	@Override
 	public Errors validate(Object instance) {

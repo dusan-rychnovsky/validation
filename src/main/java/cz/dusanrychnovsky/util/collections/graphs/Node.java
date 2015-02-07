@@ -3,6 +3,12 @@ package cz.dusanrychnovsky.util.collections.graphs;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Represents a generic graph node, with a value of type V and a collection of incident edges with labels of type L.
+ *
+ * @param <V> the type of the value
+ * @param <L> the type of edge labels
+ */
 public class Node<V, L> {
 	
 	private final V value;
@@ -25,7 +31,7 @@ public class Node<V, L> {
 	}
 	
 	/**
-	 * 
+	 *
 	 * @param label
 	 * @return
 	 */

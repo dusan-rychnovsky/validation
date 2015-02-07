@@ -10,6 +10,8 @@
 */
 package cz.dusanrychnovsky.validation;
 
+import cz.dusanrychnovsky.validation.validators.Validator;
+
 import java.util.List;
 
 public class ListValidator<T> extends Validator<List<T>> {

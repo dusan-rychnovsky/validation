@@ -10,22 +10,15 @@ import java.util.function.Supplier;
 import static java.util.Arrays.asList;
 
 /**
- * 
+ * Represents a collection of errors.
+ *
  * @author Dušan Rychnovský
  *
  */
 public class Errors implements Iterable<Error> {
 	
-	private final Tree<List<Error>, String> tree = new Tree<>(
-		new Supplier<List<Error>>() {
-			@Override
-			public List<Error> get() {
-				return new ArrayList<Error>();
-			}
-		}
-	);
-	
-	private final List<Error> errors = new ArrayList<Error>();
+	private final Tree<List<Error>, String> tree = new Tree<>(() -> new ArrayList<>());
+	private final List<Error> errors = new ArrayList<>();
 	
 	/**
 	 * 
@@ -90,7 +83,7 @@ public class Errors implements Iterable<Error> {
 	 */
 	public List<Error> get(Path fieldPath) {
 		
-		List<Error> result = new ArrayList<Error>();
+		List<Error> result = new ArrayList<>();
 		
 		Node<List<Error>, String> node = tree.get(fieldPath.getElements());
 		if (node != null) {

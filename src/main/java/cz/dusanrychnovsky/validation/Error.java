@@ -7,12 +7,21 @@ import java.util.List;
 import static java.util.Arrays.asList;
 
 /**
- * 
+ * Represents a single error.
+ *
+ * An error comprises of an error message and a (possibly empty) set of paths. An error always needs to be related to a
+ * base object-graph. The paths denote fields in that graph for which the represented error applies.
+ *
+ * Note that a single error can be applicable for more than one field - for example, an error condition like "start-date
+ * must not precede end-date" relates to fields startDate and endDate.
+ *
  * @author Dušan Rychnovský
  *
  */
 public class Error {
-	
+
+    // TODO: while an enum improves compile-time safety, it also ties the framework to a specific application
+    // (maybe use an interface here and have an application specific enum implement it)
 	private final ErrorMessage message;
 
     // TODO: should in fact be a set, not a list
@@ -76,8 +85,7 @@ public class Error {
 			
 			return new Error(newPaths, message);
 		}
-		
-		// TODO: will need to think about proper path-prepending semantics
+
 		throw new IllegalArgumentException(
 			"Cannot prepend more than one path."
 		);

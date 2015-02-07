@@ -1,4 +1,7 @@
-package cz.dusanrychnovsky.validation;
+package cz.dusanrychnovsky.validation.validators;
+
+import cz.dusanrychnovsky.validation.*;
+import cz.dusanrychnovsky.validation.Error;
 
 import static cz.dusanrychnovsky.validation.ErrorMessage.VALUE_DOES_NOT_MATCH_REGEXP;
 
@@ -12,7 +15,7 @@ import java.util.regex.Pattern;
  */
 public class RegexpValidator extends Validator<String> {
 	
-	private final Error error = new Error(VALUE_DOES_NOT_MATCH_REGEXP);
+	private final cz.dusanrychnovsky.validation.Error error = new Error(VALUE_DOES_NOT_MATCH_REGEXP);
 	private final Pattern pattern;
 	
 	/**

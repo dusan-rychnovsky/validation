@@ -4,6 +4,12 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.function.Supplier;
 
+/**
+ * Represents a tree with nodes holding values of type V and connected via edges with labels of type L.
+ *
+ * @param <V>
+ * @param <L>
+ */
 public class Tree<V, L> {
 	
 	private final Supplier<V> supplier;
@@ -11,15 +17,16 @@ public class Tree<V, L> {
 	
 	/**
 	 * 
-	 * @param supplier
+	 * @param supplier supplies initial node values
 	 */
 	public Tree(Supplier<V> supplier) {
 		this.supplier = supplier;
-		rootNode = new Node<V, L>(supplier.get());
+		rootNode = new Node<>(supplier.get());
 	}
 	
 	/**
-	 * 
+	 * Returns a node corresponding to the given path or null, if such a node does not exist.
+     *
 	 * @param path
 	 * @return
 	 */
@@ -37,12 +44,12 @@ public class Tree<V, L> {
 	}
 	
 	/**
-	 * 
+	 * Inserts a new node with the given value into the represented tree at the given path.
+     *
 	 * @param path
 	 * @param value
 	 * @return
 	 */
-	// TODO: throw an exception when the insert operation would lead to creating a cycle
 	public Node<V, L> insert(List<L> path, V value) {
 
 		Iterator<L> it = path.iterator();
@@ -55,10 +62,10 @@ public class Tree<V, L> {
 			if (nextNode == null) {
 				
 				if (it.hasNext()) {
-					nextNode = new Node<V, L>(supplier.get());
+					nextNode = new Node<>(supplier.get());
 				}
 				else {
-					nextNode = new Node<V, L>(value);
+					nextNode = new Node<>(value);
 				}
 			}
 			

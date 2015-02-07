@@ -1,5 +1,8 @@
 package cz.dusanrychnovsky.validation;
 
+import cz.dusanrychnovsky.validation.validators.NonEmptyValidator;
+import cz.dusanrychnovsky.validation.validators.Validator;
+
 import static cz.dusanrychnovsky.validation.Member.*;
 
 public class MemberValidator extends Validator<Member> {

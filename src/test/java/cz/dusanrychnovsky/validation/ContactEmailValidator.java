@@ -1,5 +1,8 @@
 package cz.dusanrychnovsky.validation;
 
+import cz.dusanrychnovsky.validation.validators.EmailValidator;
+import cz.dusanrychnovsky.validation.validators.Validator;
+
 import static cz.dusanrychnovsky.validation.ContactEmail.*;
 
 import static java.util.Arrays.asList;

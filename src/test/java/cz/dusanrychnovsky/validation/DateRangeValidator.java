@@ -1,5 +1,7 @@
 package cz.dusanrychnovsky.validation;
 
+import cz.dusanrychnovsky.validation.validators.Validator;
+
 import static cz.dusanrychnovsky.validation.ErrorMessage.DATE_RANGE_IS_INVALID;
 
 import java.time.LocalDate;

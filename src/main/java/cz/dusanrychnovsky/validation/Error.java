@@ -14,7 +14,9 @@ import static java.util.Arrays.asList;
 public class Error {
 	
 	private final ErrorMessage message;
-	private final List<Path> fieldPaths;
+
+    // TODO: should in fact be a set, not a list
+    private final List<Path> fieldPaths;
 	
 	/**
 	 * 

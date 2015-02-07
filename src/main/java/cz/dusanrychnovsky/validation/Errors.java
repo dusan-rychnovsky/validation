@@ -66,7 +66,7 @@ public class Errors implements Iterable<Error> {
 	/**
 	 * 
 	 * @param paths
-	 * @param error
+	 * @param errors
 	 */
 	public void addAll(List<Path> paths, Errors errors) {
 		for (Error error : errors) {
@@ -76,8 +76,8 @@ public class Errors implements Iterable<Error> {
 
 	/**
 	 * 
-	 * @param email
-	 * @param validate
+	 * @param fieldName
+	 * @param errors
 	 */
 	public void addAll(String fieldName, Errors errors) {
 		addAll(asList(new Path(fieldName)), errors);

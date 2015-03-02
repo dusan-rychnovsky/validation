@@ -15,7 +15,7 @@ import java.util.regex.Pattern;
  */
 public class RegexpValidator implements Validator<String> {
 	
-	private final cz.dusanrychnovsky.validation.Error error = new Error(VALUE_DOES_NOT_MATCH_REGEXP);
+	private final Error error = new Error(VALUE_DOES_NOT_MATCH_REGEXP);
 	private final Pattern pattern;
 	
 	/**

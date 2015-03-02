@@ -7,7 +7,7 @@ import cz.dusanrychnovsky.validation.Errors;
  *
  * @param <T>
  */
-public abstract class Validator<T> {
+public interface Validator<T> {
 	
 	/**
 	 *  Validates the given object-graph and returns a collection of all applicable errors.
@@ -23,7 +23,7 @@ public abstract class Validator<T> {
 	 * @param instance
 	 * @return
 	 */
-	public boolean isValid(T instance) {
+	default public boolean isValid(T instance) {
 		return validate(instance).isEmpty();
 	}
 }

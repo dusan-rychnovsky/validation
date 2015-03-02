@@ -10,7 +10,7 @@ import static cz.dusanrychnovsky.validation.ErrorMessage.EMAIL_IS_MALFORMED;
  * @author Dušan Rychnovský
  *
  */
-public class EmailValidator extends Validator<String> {
+public class EmailValidator implements Validator<String> {
 	
 	private static final String EMAIL_REGEXP = "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$";
 	

@@ -5,7 +5,7 @@ import cz.dusanrychnovsky.validation.validators.Validator;
 
 import java.util.List;
 
-public class ListValidator<T> extends Validator<List<T>> {
+public class ListValidator<T> implements Validator<List<T>> {
 
     private final Validator<T> itemValidator;
 

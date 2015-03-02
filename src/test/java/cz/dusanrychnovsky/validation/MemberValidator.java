@@ -6,7 +6,7 @@ import cz.dusanrychnovsky.validation.validators.Validator;
 
 import static cz.dusanrychnovsky.validation.Member.*;
 
-public class MemberValidator extends Validator<Member> {
+public class MemberValidator implements Validator<Member> {
 	
 	private NonEmptyValidator nonEmptyValidator = new NonEmptyValidator();
 	private ListValidator<ContactEmail> contactEmailsValidator = new ListValidator<>(new ContactEmailValidator());

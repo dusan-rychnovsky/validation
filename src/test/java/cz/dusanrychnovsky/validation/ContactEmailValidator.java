@@ -7,7 +7,7 @@ import static cz.dusanrychnovsky.validation.ContactEmail.*;
 
 import static java.util.Arrays.asList;
 
-public class ContactEmailValidator extends Validator<ContactEmail> {
+public class ContactEmailValidator implements Validator<ContactEmail> {
 	
 	private EmailValidator emailValidator = new EmailValidator();
 	private DateRangeValidator dateRangeValidator = new DateRangeValidator();

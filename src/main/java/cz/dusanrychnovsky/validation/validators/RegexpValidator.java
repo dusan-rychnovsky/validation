@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
  * @author Dušan Rychnovský
  *
  */
-public class RegexpValidator extends Validator<String> {
+public class RegexpValidator implements Validator<String> {
 	
 	private final cz.dusanrychnovsky.validation.Error error = new Error(VALUE_DOES_NOT_MATCH_REGEXP);
 	private final Pattern pattern;

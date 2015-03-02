@@ -6,7 +6,7 @@ import static cz.dusanrychnovsky.validation.ErrorMessage.DATE_RANGE_IS_INVALID;
 
 import java.time.LocalDate;
 
-public class DateRangeValidator extends Validator<DateRange> {
+public class DateRangeValidator implements Validator<DateRange> {
 	
 	private final Error error = new Error(DATE_RANGE_IS_INVALID);
 	

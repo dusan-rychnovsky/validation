@@ -5,7 +5,7 @@ import cz.dusanrychnovsky.validation.Error;
 
 import static cz.dusanrychnovsky.validation.ErrorMessage.VALUE_IS_EMPTY;
 
-public class NonEmptyValidator extends Validator<String> {
+public class NonEmptyValidator implements Validator<String> {
 	
 	private final cz.dusanrychnovsky.validation.Error error = new Error(VALUE_IS_EMPTY);
 

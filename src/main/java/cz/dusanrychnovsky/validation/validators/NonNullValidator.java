@@ -5,7 +5,7 @@ import cz.dusanrychnovsky.validation.Error;
 
 import static cz.dusanrychnovsky.validation.ErrorMessage.VALUE_IS_NULL;
 
-public class NonNullValidator extends Validator<Object> {
+public class NonNullValidator implements Validator<Object> {
 	
 	private final cz.dusanrychnovsky.validation.Error error = new Error(VALUE_IS_NULL);
 
